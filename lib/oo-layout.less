@@ -1,0 +1,54 @@
+.AppLayout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  .AppLayout--menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    background: dimgray;
+    color: white;
+
+    &.on-ios {
+      box-sizing: content-box;
+      padding-top: 20px;
+    }
+  }
+
+  .AppLayout--left, .AppLayout--right {
+    position: absolute;
+    top: 44px;
+    bottom: 0;
+    width: 50%;
+    color: white;
+
+    &.on-ios {
+      top: 64px;
+    }
+  }
+
+  .AppLayout--left {
+    left: 0;
+    background-color: lightblue;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      right: 0;
+    }
+  }
+
+  .AppLayout--right {
+    right: 0;
+    background-color: moccasin;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}
