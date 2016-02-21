@@ -1,7 +1,7 @@
 Package.describe({
   name: 'ox2:layout',
   summary: 'TESTING_DO_NOT_USE App layout',
-  version: '1.1.0',
+  version: '1.2.0',
   git: ' /* Fill me in! */ '
 });
 
@@ -11,9 +11,9 @@ var CS = [C, S];
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.0.2');
-  // 3rd party
+  // Core
   api.use([
-    'lauricio:less-autoprefixer@2.5.0_3'
+    'less'
     ]);
   api.addFiles('lib/oo-layout.less', C);
 });
